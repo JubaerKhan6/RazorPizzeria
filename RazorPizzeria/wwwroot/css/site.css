@@ -1,0 +1,230 @@
+﻿html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-image: url('../images/pizzas/untitled.png');
+}
+
+.mainText {
+    padding :75px 20px;
+}
+
+.mainImage{
+    border-radius:20px;
+    filter:drop-shadow(0px 0px 20px black);
+
+}
+
+.mainSub{
+    font-weight:400;
+    letter-spacing : 2px;
+}
+
+.smallText{
+    text-align:right;
+    color:gray;
+}
+
+.makeYourOwnDiv {
+    background: #F0F648;
+    margin:0;
+}
+
+.makeYourOwnText{
+    margin: 20px 0 20px 0;
+    color: black;
+    font: bold;
+    font-size:50px;
+}
+
+.buttonMenu {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color: yellow;
+    color: black;
+    border: 2px solid black;
+    font-size: 24px;
+    width: 250px;
+}
+.headtext{
+    color:greenyellow;
+}
+
+.dropshadow {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: darkred;
+    filter: drop-shadow(0px 0px 30px rgba(0,0,0,0.8));
+    font:bold
+}
+
+.semitrans {
+    background: rgba(0, 0, 0, 0.0);
+    margin: 5;
+}
+.bigtext{
+    font: bold 24px cocogothic;
+}
+.dropshadow2 {
+    -webkit-text-stroke-width: 0.002px;
+    -webkit-text-stroke-color: white;
+    filter: drop-shadow(0px 0px 30px rgba(0,0,0,0.9));
+    font-size: 20px;
+}
+
+.pizza-img:hover {
+    transform: scale(1.05);
+    filter: saturate(1.05);
+    filter: drop-shadow(0px 0px 30px rgba(236, 0, 0,0.9));
+}
+
+.pizza-img2:hover {
+    transform: scale(1.05);
+    filter: saturate(1.05);
+    filter: drop-shadow(0px 0px 30px rgba(236, 255, 0,0.9));
+}
+
+.navbartext{
+    font-size: 20px;
+}
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: inline-block;
+}
+
+input[type="checkbox"][id^="myCheckbox"] {
+  display: none;
+}
+
+label {
+    border: 0px solid rgba(0,0,0,0.5);
+    padding: 10px;
+    display: block;
+    position: relative;
+    margin: 10px;
+    cursor: pointer;
+}
+
+label:before {
+  background-color: yellow;
+  color: white;
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  border: 1px solid grey;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 28px;
+  transition-duration: 0.4s;
+  transform: scale(0);
+}
+
+label img {
+  height: 100px;
+  width: 100px;
+  transition-duration: 0.2s;
+  transform-origin: 50% 50%;
+}
+
+:checked + label {
+  border-color: #ddd;
+}
+
+:checked + label:before {
+  content: "✓";
+  background-color: grey;
+  transform: scale(1);
+}
+
+:checked + label img {
+  transform: scale(0.9);
+  /* box-shadow: 0 0 5px #333; */
+  z-index: -1;
+}
+ul {
+    list-style-type: none;
+}
+
+li {
+    display: inline-block;
+}
+
+input[type="checkbox"][id^="myCheckbox"] {
+    display: none;
+}
+
+label {
+    border: 0px solid yellow;
+    padding: 2px;
+    display: ruby-base-container;
+    position: relative;
+    margin: 20px;
+    cursor: pointer;
+}
+
+    label:before {
+        background-color: white;
+        color: white;
+        content: " ";
+        display: block;
+        border-radius: 50%;
+        border: 1px solid grey;
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        width: 25px;
+        height: 25px;
+        text-align: center;
+        line-height: 28px;
+        transition-duration: 0.5s;
+        transform: scale(0);
+    }
+
+    label img {
+        height: 100px;
+        width: 100px;
+        transition-duration: 0.5s;
+        transform-origin: 50% 50%;
+    }
+
+:checked + label {
+    border-color: #ddd;
+}
+
+    :checked + label:before {
+        content: "✓";
+        background-color: grey;
+        transform: scale(0.5);
+    }
+
+    :checked + label img {
+        transform: scale(1.2);
+         
+        z-index: -1;
+    }
+.backButton {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color: black;
+    color: yellow;
+    border: 2px solid white;
+    font-size: 12px;
+    width: 100px;
+}

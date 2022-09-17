@@ -1,0 +1,81 @@
+﻿@page
+@model RazorPizzeria.Pages.OrdersModel
+
+@{
+}
+
+<h3 style="margin-left: 540px"> Your Orders</h3>
+
+<hr />
+<font size="5" face="Arial">
+<table align="center" class="table" style="width:50%">
+
+    <thead>
+        <tr>
+            <th>ID
+
+            </th>
+            <th>
+                Illustration
+            </th>
+            <th>
+                Pizza Name
+
+            </th>
+            <th>
+                Price 
+
+            </th>
+        </tr>
+    </thead>
+    
+
+
+    <tbody>
+        @foreach (var order in Model.PizzaOrders){
+            var imagepath = "~/images/Pizzas/" + (@order.PizzaName+ ".png");
+            <tr>
+                <td>
+                    @order.Id
+                </td>
+                <td style="width=25%">
+                    @{
+                        var pnames = new List<string> { "Margerita", "Carbonara", "Hawaiian", "MeatFeast", "Mushroom", "Seafood", "Bolognese", "FourSeasons", "CheeseBlast" };
+                        if (order.PizzaName.Equals("Margerita") || order.PizzaName.Equals("Carbonara") || order.PizzaName.Equals("Hawaiian") || order.PizzaName.Equals("MeatFeast") || order.PizzaName.Equals("Mushroom") || order.PizzaName.Equals("Seafood") || order.PizzaName.Equals("Bolognese") || order.PizzaName.Equals("CheeseBlast") || order.PizzaName.Equals("FourSeasons"))
+                        {
+                            <img src="@imagepath" class="w-50 " asp-append-version=true />
+
+                        
+
+                       }
+                       else{
+                            <img src="~/images/Pizzas/Falling.png" class="w-50" asp-append-version=true />
+                    
+                        }
+                        
+
+
+                    }
+
+                    
+                
+                </td>
+                <td style="width:50%">
+                    @order.PizzaName
+                </td>
+                <td style="width:50%">
+                    $ @order.BasePrice
+                </td>
+
+            </tr>
+        }
+        <tr>
+           
+
+        </tr>
+</tbody>
+</table>
+</font>
+<a class=" btn backButton" style="margin-right:85%" asp-area="" asp-page="Pizza"> Back </a>
+
+                          

@@ -1,0 +1,88 @@
+﻿@page
+@model RazorPizzeria.Pages.Forms.CustomPizzaModel
+@{
+}
+
+<div class="text-center container">
+    <h1> Create your own pizza !</h1>
+    <hr />
+    <form method="post">
+        <img src="~/images/Pizzas/scientist-pizza-slice-cartoon-character-260nw-1507329830.png" class="w-20" />
+       
+        <input class="col-9" style="height:100px; font-size:25pt; font-style:italic ;" type="text" asp-for="Pizza.PizzaName" placeholder="Give your pizza a Name." /> <br />
+        
+        <h2>Select Toppings :</h2>
+        <ul style="font:bold">
+            <li>
+                <input type="checkbox" id="Pepperoni" asp-for="Pizza.Pepperoni" placeholder="Pepperoni" />  
+                <label for="Pepperoni">
+                    <img src="~/images/Pizzas/pepp.png" /><br /> Pepperoni
+
+                </label>
+                </li>
+            <li>
+                <input type="checkbox" id="Cheese" asp-for="Pizza.Cheese" placeholder="Cheese" />
+                <label for="Cheese"> <img src="~/images/Pizzas/cheese.png" /><br /> Cheese <br />
+
+            </li>
+        <li>
+                <input type="checkbox" id="Chicken" asp-for="Pizza.Chicken" placeholder="Chicken" /> 
+                <label for="Chicken" class="font-bold"><img src="~/images/Pizzas/chicken.png" /> <br /> Chicken
+
+            </li>
+
+        <li>
+                <input type="checkbox" id="Beef" asp-for="Pizza.Beef" placeholder="Beef" />
+                <label for="beef">
+                    <img src="~/images/Pizzas/beef.png" /> <br />
+                Beef 
+            
+         </li>
+        <li>
+                <input type="checkbox" id="Ham" asp-for="Pizza.HAM" placeholder="Ham" /> 
+                <label for="Ham">
+                    <img src="~/images/Pizzas/Ham-Free-Download-PNG.png" />
+                    <br />
+                Ham 
+        </li>
+
+        <li>
+                <input type="checkbox" id="Pineapple" asp-for="Pizza.Pineapple" placeholder="Pineapple" />
+                <label for="Pineapple">
+                    <img src="~/images/Pizzas/Pineapple.png" />
+                    <br />
+                Pineapple <br />
+
+        </li>
+        
+        <li>
+                <input type="checkbox" id="Tuna" asp-for="Pizza.Tuna" placeholder="Tuna" /> 
+                <label for="Tuna">
+                    <img src="~/images/Pizzas/Tuna.png" /><br />
+                Tuna <br />
+
+
+        </li>
+
+        <li>
+                <input type="checkbox" id="Mushroom" asp-for="Pizza.Mushroom" placeholder="Mushroom" /> 
+                <label for="Mushroom" class="font-bold">
+                    <img src="~/images/Pizzas/Mushroom top.png" />
+                Mushroom <br />
+
+        </li>
+        
+        <li>
+                <input type="checkbox" id="Sausage" asp-for="Pizza.Sausage" placeholder="Sausage" /> 
+                <label for="Sausage">
+                    <img src="~/images/Pizzas/sausage.png" /> 
+                
+                Sausage <br />
+
+        </li>
+        
+        </ul>
+        <button class="btn buttonMenu mt-1" type="submit">Build my Pizza</button>
+    </form>
+</div>
+<a class=" btn backButton align-center" style="margin-right:85%" asp-area="" asp-page="/Pizza"> Back </a>

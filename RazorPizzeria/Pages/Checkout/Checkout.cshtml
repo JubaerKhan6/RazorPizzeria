@@ -1,0 +1,18 @@
+﻿@page
+@model RazorPizzeria.Pages.Checkout.CheckoutModel
+@{
+}
+
+<div class="col-3 mx-auto mb-3">
+    <p class="align-content-center bigtext" > Your Order! </p>
+</div>
+<div class="align-content-center" >
+    
+    <div class="col-4 mx-auto mb-3">
+        <img src="~/images/Pizzas/Chef.png" class="w-100" asp-apend-version="true"/>
+        <p class="bigtext dropshadow2"> Your order for the "@Model.PizzaName" pizza is ready</p>
+        <p class="bigtext dropshadow2">Total price of your order is : @Model.PizzaPrice $</p>
+        <br />
+        <a class="btn alert-primary mt1 mx-auto" asp-area="" asp-page="ThankYou"> Confirm order </a>
+    </div>
+</div>
